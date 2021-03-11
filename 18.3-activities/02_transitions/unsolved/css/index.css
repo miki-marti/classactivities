@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-family: helvetica, arial, sans-serif;
+  color: white;
+  grid-template-areas:
+  "hover"
+  "disabled"
+  ;
+  height: 500px;
+}
+.hoverMe {
+  grid-area: hover;
+  background-color: red;
+  color: white;
+  width: 150px;
+  text-align: center;
+  height: 50px;
+  /* Add the css property transition here! */
+  transition: 0.3s; 
+  transition: ease-in-out 1s;
+
+}
+/* active state */
+.hoverMe:hover {
+  /* Add your hover state css here. */
+  background-color: lightpink;
+  transform: scale(2,4);
+  text-decoration: underline;
+  transition: all 2s ease-in-out;
+
+}
